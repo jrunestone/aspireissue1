@@ -1,0 +1,25 @@
+{
+  "name": "aspireissue1",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0",
+
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:latest": {},
+    "ghcr.io/devcontainers/features/azure-cli:latest": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers",
+        "ms-dotnettools.csdevkit"
+      ],
+
+      "settings": {
+        "remote.autoForwardPorts": true,
+        "csharp.experimental.debug.hotReload": true
+      }
+    }
+  },
+  
+  "postCreateCommand": "dotnet tool install -g Aspire.Cli --prerelease"
+}
