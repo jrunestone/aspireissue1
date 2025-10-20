@@ -1,0 +1,4 @@
+bin/
+obj/
+flake.nix
+flake.lock
